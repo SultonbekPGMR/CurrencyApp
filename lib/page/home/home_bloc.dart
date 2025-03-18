@@ -18,6 +18,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           status: Status.success,
           currencyList: await currencyService.getAllForToday() ?? [],
         ),
+
       );
     });
     on<GetCurrencyForSelectedDate>((event, emit) async {
